@@ -15,6 +15,7 @@ test.describe('Currency Exchange Form', () => {
     loginPage.login('username', 'password')
   })
 
+  # edit now
   test('Should make currency exchange', async ({ page }) => {
     await page.click('#pay_bills_tab')
     await page.click('text=Purchase Foreign Currency')
