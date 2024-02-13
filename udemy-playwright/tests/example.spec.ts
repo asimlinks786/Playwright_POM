@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 import { loadHomepage, assertTitle } from '../helpers'
+import { doesNotMatch } from 'assert'
 
 test('Simple basic test', async ({ page }) => {
   await page.goto('https://www.example.com')
@@ -12,6 +13,7 @@ test('Clickin on Elements', async ({ page }) => {
   await page.goto('http://zero.webappsecurity.com/index.html')
   await page.click('#signin_button')
   await page.click('text=Sign in')
+// done
 
   const errorMessage = await page.locator('.alert-error')
   await expect(errorMessage).toContainText('Login and/or password are wrong.')
